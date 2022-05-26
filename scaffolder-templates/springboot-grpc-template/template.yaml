@@ -69,7 +69,7 @@ spec:
           destination: ${{ parameters.repoUrl | parseRepoUrl }}
           http_port: 8080
 
-    - id: publish
+#     - id: publish
     - id: publish
       name: Publish
       action: publish:azure
