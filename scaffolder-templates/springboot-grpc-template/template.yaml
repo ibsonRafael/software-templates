@@ -74,9 +74,9 @@ spec:
       name: Publish
       action: publish:azure
       input:
-        allowedHosts: ['dev.azure.com']
-        description: 'This is {{ parameters.name }}'
-        repoUrl: '{{ parameters.repoUrl }}'
+        allowedHosts: ["dev.azure.com"]
+        description: This is {{ parameters.component_id }}
+        repoUrl: {{ parameters.repoUrl }}
 #       name: Publish
 #       action: publish:github
 #       input:
