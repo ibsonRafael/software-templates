@@ -70,12 +70,19 @@ spec:
           http_port: 8080
 
     - id: publish
+    - id: publish
       name: Publish
-      action: publish:github
+      action: publish:azure
       input:
-        allowedHosts: ["github.com"]
-        description: This is ${{ parameters.component_id }}
-        repoUrl: ${{ parameters.repoUrl }}
+        allowedHosts: ['dev.azure.com']
+        description: 'This is {{ parameters.name }}'
+        repoUrl: '{{ parameters.repoUrl }}'
+#       name: Publish
+#       action: publish:github
+#       input:
+#         allowedHosts: ["github.com"]
+#         description: This is ${{ parameters.component_id }}
+#         repoUrl: ${{ parameters.repoUrl }}
 
     - id: register
       name: Register
